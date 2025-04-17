@@ -1,6 +1,6 @@
 flask
 seaborn
-matplotlib.pyplot
+matplotlib
 requests
 pandas
 numpy
