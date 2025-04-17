@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template
 import seaborn as sns
 import matplotlib.pyplot as plt
