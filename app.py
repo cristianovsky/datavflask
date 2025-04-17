@@ -8,9 +8,7 @@ app = Flask(__name__)
 
 url = 'https://docs.google.com/spreadsheets/d/1Mu6z8g0m0LhjGmEszyXIdiNMegUCRqCgULBoEMq42RI/export?format=csv'
 
-
 def generar_graficas(df=None):
-#    df = sns.load_dataset('titanic')
     if df is None:
         df = pd.read_csv(url)
 
@@ -45,7 +43,6 @@ def index():
     try:
         df = pd.read_csv(url)
         generar_graficas(df)
-
     except Exception as e:
         print(f"Error al leer el CSV: {e}")
     return render_template('index.html')
@@ -55,6 +52,5 @@ def analisis2():
     return render_template('analisis2.html')
 
 if __name__ == '__main__':
-    generar_graficas()
-    port = int(os.environ.get('PORT', 5000))  # Render usa PORT
-    app.run(host='0.0.0.0', port=port, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
