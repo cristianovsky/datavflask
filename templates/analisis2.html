@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Más Análisis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Más Gráficas del Titanic</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/analisis2">Más Análisis</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Distribución de tarifas por clase</h2>
+    <img src="{{ url_for('static', filename='grafica3.png') }}" alt="Gráfica 3">
+    <p>Se evidencian grandes diferencias en las tarifas pagadas según la clase, especialmente en primera clase.</p>
+
+    <h2>Edad por sexo y supervivencia</h2>
+    <img src="{{ url_for('static', filename='grafica4.png') }}" alt="Gráfica 4">
+    <p>La supervivencia estuvo más relacionada con el sexo y la edad. Las mujeres jóvenes sobrevivieron más.</p>
+  </section>
+</body>
+</html>

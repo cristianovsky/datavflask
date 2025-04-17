@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Análisis de Datos Titanic</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Exploración de Datos del Titanic</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/analisis2">Más Análisis</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Distribución de edades por sexo</h2>
+    <img src="{{ url_for('static', filename='grafica1.png') }}" alt="Gráfica 1">
+    <p>La mayoría de los pasajeros tenían entre 20 y 40 años. Se observa mayor proporción de mujeres jóvenes.</p>
+
+    <h2>Supervivencia por clase</h2>
+    <img src="{{ url_for('static', filename='grafica2.png') }}" alt="Gráfica 2">
+    <p>Los pasajeros de primera clase tuvieron una mayor tasa de supervivencia en comparación con las otras clases.</p>
+  </section>
+</body>
+</html>
+
